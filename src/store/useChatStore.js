@@ -12,7 +12,7 @@ export const useChatStore = create(
 
       // UI state
       theme: 'dark',
-      sidebarOpen: true,
+      sidebarOpen: false,
       activeNav: 'about',
       modalProject: null,
       toasts: [],

@@ -113,7 +113,7 @@ export default function SkillsResponse({ data, radar }) {
 
       {/* Pill Tags */}
       {tab === 'pills' && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid grid-cols-2 gap-2.5">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid grid-cols-1 xs:grid-cols-2 gap-2.5">
           {CATS.map(cat => (
             <div key={cat.key}
               className="rounded-xl p-3.5 border border-white/[0.06]"

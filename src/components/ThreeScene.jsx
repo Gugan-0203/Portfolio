@@ -18,7 +18,8 @@ function ConstellationWeb({ isDark, isTyping }) {
   const pointsRef = useRef()
 
   const { lines, nodes } = useMemo(() => {
-    const nodeCount = 60
+    const isMobile = window.innerWidth < 768
+    const nodeCount = isMobile ? 35 : 60
     const pts = []
     for (let i = 0; i < nodeCount; i++) {
       pts.push(new THREE.Vector3(

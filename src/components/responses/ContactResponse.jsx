@@ -168,14 +168,14 @@ export default function ContactResponse({ data }) {
               type="text" 
               placeholder="Your Name" 
               required
-              className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-all"
+              className="w-full px-4 py-2.5 rounded-xl bg-black/[0.03] dark:bg-white/5 border border-black/[0.08] dark:border-white/10 text-sm focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-all text-ink-l dark:text-ink"
             />
             <input 
               name="email"
               type="email" 
               placeholder="Your Email" 
               required
-              className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-all"
+              className="w-full px-4 py-2.5 rounded-xl bg-black/[0.03] dark:bg-white/5 border border-black/[0.08] dark:border-white/10 text-sm focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-all text-ink-l dark:text-ink"
             />
           </div>
           <input 
@@ -183,14 +183,14 @@ export default function ContactResponse({ data }) {
             type="tel" 
             placeholder="Your Contact Number" 
             required
-            className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-all"
+            className="w-full px-4 py-2.5 rounded-xl bg-black/[0.03] dark:bg-white/5 border border-black/[0.08] dark:border-white/10 text-sm focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-all text-ink-l dark:text-ink"
           />
           <textarea 
             name="message"
             placeholder="How can I help you?" 
             rows="4"
             required
-            className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-all resize-none"
+            className="w-full px-4 py-2.5 rounded-xl bg-black/[0.03] dark:bg-white/5 border border-black/[0.08] dark:border-white/10 text-sm focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-all resize-none text-ink-l dark:text-ink"
           ></textarea>
           
           <button 

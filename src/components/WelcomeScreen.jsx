@@ -99,7 +99,7 @@ export default function WelcomeScreen({ onSend }) {
       </motion.p>
 
       {/* Navigation cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full max-w-[560px]">
+      <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 w-full max-w-[560px]">
         {CARDS.map((card, i) => (
           <motion.button
             key={card.id}

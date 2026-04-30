@@ -51,7 +51,7 @@ export default function AboutResponse({ data }) {
       </div>
 
       {/* Stats — 3D glowing cards */}
-      <div className="grid grid-cols-4 gap-2 mb-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
         {data.stats.map((s, i) => (
           <motion.div
             key={i}

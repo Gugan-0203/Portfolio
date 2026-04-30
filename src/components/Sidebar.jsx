@@ -7,7 +7,7 @@ import Mini3DLogo from './Mini3DLogo'
 export default function Sidebar({ onSend }) {
   const { sessions, activeSessionId, activeNav, theme, newSession,
     switchSession, deleteSession, setActiveNav, toggleTheme,
-    goHome, showHome } = useChatStore()
+    goHome, showHome, toggleSidebar } = useChatStore()
   const [hoveredDel, setHoveredDel] = useState(null)
 
   const handleNav = (id) => { setActiveNav(id); onSend(id) }
@@ -25,7 +25,15 @@ export default function Sidebar({ onSend }) {
           <img src="/avatar.png" alt="Logo" className="w-6 h-6 rounded-full object-cover border border-white/10" /> Portfolio
         </div>
 
-        <div className="flex gap-1">
+        <div className="flex gap-1 items-center">
+          {/* Mobile Close Button */}
+          <button onClick={toggleSidebar}
+            className="md:hidden p-1.5 mr-1 rounded-md text-ink-l-dim dark:text-ink-dim hover:bg-hover-light dark:hover:bg-hover transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+
           <button onClick={toggleTheme}
             className="p-1.5 rounded-md text-ink-l-dim dark:text-ink-dim hover:bg-hover-light dark:hover:bg-hover transition-colors text-sm">
             {theme === 'dark' ? '🌙' : '☀️'}

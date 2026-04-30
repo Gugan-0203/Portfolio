@@ -70,7 +70,7 @@ export default function ExperienceResponse({ data }) {
                   <div className="text-[11px] text-ink-l-dim dark:text-ink-dim mt-0.5">📍 {exp.location} · {exp.type}</div>
                 </div>
                 <div className="flex flex-col items-end gap-1">
-                  <span className="text-[11px] px-2 py-0.5 rounded-full text-white font-semibold" style={{ background: exp.color + '33', border: `1px solid ${exp.color}66` }}>
+                  <span className="text-[11px] px-2 py-0.5 rounded-full text-ink-l dark:text-white font-semibold" style={{ background: exp.color + '33', border: `1px solid ${exp.color}66` }}>
                     {exp.period}
                   </span>
                   {exp.current && <span className="text-[10px] text-success font-bold">● Live</span>}

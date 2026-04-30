@@ -44,7 +44,7 @@ export default function MessageBubble({ message, onSend, onOpenModal }) {
     return (
       <motion.div className="flex justify-end px-4 py-2"
         initial={{ opacity: 0, y: 10, x: 20 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 0.25 }}>
-        <div className="msg-user px-4 py-2.5 text-[14px] text-white max-w-[480px] leading-relaxed">
+        <div className="msg-user px-4 py-2.5 text-[14px] max-w-[85%] md:max-w-[480px] leading-relaxed">
           {message.text}
         </div>
       </motion.div>
