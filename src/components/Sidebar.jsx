@@ -150,6 +150,6 @@ export default function Sidebar({ onSend }) {
           </a>
         </div>
       </div>
-    </motion.aside>
+    </aside>
   )
 }
