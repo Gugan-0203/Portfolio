@@ -10,8 +10,15 @@ export default function Sidebar({ onSend }) {
     goHome, showHome, toggleSidebar } = useChatStore()
   const [hoveredDel, setHoveredDel] = useState(null)
 
-  const handleNav = (id) => { setActiveNav(id); onSend(id) }
-  const handleHome = () => { goHome() }
+  const handleNav = (id) => { 
+    setActiveNav(id)
+    onSend(id)
+    if (window.innerWidth < 768) toggleSidebar() 
+  }
+  const handleHome = () => { 
+    goHome()
+    if (window.innerWidth < 768) toggleSidebar()
+  }
 
   return (
     <motion.aside
@@ -21,7 +28,8 @@ export default function Sidebar({ onSend }) {
     >
       {/* Header */}
       <div className="flex items-center justify-between px-3.5 py-3.5 border-b border-black/[0.05] dark:border-white/[0.05]">
-        <div className="flex items-center gap-2 font-bold text-sm text-ink-l dark:text-ink">
+        <div className="flex items-center gap-2 font-bold text-sm text-ink-l dark:text-ink cursor-pointer md:cursor-default"
+          onClick={() => window.innerWidth < 768 && toggleSidebar()}>
           <img src="/avatar.png" alt="Logo" className="w-6 h-6 rounded-full object-cover border border-white/10" /> Portfolio
         </div>
 
@@ -109,7 +117,7 @@ export default function Sidebar({ onSend }) {
                   onMouseEnter={() => setHoveredDel(s.id)} onMouseLeave={() => setHoveredDel(null)}
                   className={`flex items-center rounded-lg overflow-hidden transition-colors
                     ${s.id === activeSessionId ? 'bg-accent/[0.12]' : 'hover:bg-hover-light dark:hover:bg-hover'}`}>
-                  <button onClick={() => switchSession(s.id)}
+                  <button onClick={() => { switchSession(s.id); if (window.innerWidth < 768) toggleSidebar() }}
                     className="flex-1 flex items-center gap-2 px-2.5 py-1.5 text-xs text-ink-l-muted dark:text-ink-muted text-left min-w-0">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="flex-shrink-0">
                       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" strokeWidth="2"/>

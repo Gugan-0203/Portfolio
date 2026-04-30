@@ -46,8 +46,8 @@ export default function App() {
         <div id="scroll-progress" className="progress-bar"></div>
 
         {/* Desktop Sidebar Container */}
-        <div className={`hidden md:flex z-20 h-full transition-all duration-300 ease-in-out ${sidebarOpen ? 'w-[260px]' : 'w-0'}`}>
-          <AnimatePresence>
+        <div className={`hidden md:flex z-20 h-full transition-all duration-300 ease-in-out overflow-hidden ${sidebarOpen ? 'w-[260px]' : 'w-0'}`}>
+          <AnimatePresence mode="wait">
             {sidebarOpen && <Sidebar onSend={handleSend} />}
           </AnimatePresence>
         </div>
