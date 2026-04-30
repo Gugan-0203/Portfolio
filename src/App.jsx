@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Sidebar from './components/Sidebar';
 import ChatWindow from './components/ChatWindow';
 import InputArea from './components/InputArea';
