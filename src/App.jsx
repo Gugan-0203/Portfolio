@@ -22,6 +22,13 @@ export default function App() {
     }
   }, [theme]);
 
+  // Handle initial sidebar state on mobile
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      useChatStore.getState().setSidebarOpen(false);
+    }
+  }, []);
+
   const handleSend = (text) => {
     if (window.__portfolioSend) {
       window.__portfolioSend(text);
@@ -56,10 +63,22 @@ export default function App() {
         <AnimatePresence>
           {sidebarOpen && (
             <div className="md:hidden">
-              <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60]" onClick={toggleSidebar} />
-              <div className="fixed inset-y-0 left-0 z-[70]">
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60]" 
+                onClick={toggleSidebar} 
+              />
+              <motion.div 
+                initial={{ x: '-100%' }}
+                animate={{ x: 0 }}
+                exit={{ x: '-100%' }}
+                transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                className="fixed inset-y-0 left-0 z-[70] w-[260px]"
+              >
                 <Sidebar onSend={handleSend} />
-              </div>
+              </motion.div>
             </div>
           )}
         </AnimatePresence>

@@ -21,10 +21,8 @@ export default function Sidebar({ onSend }) {
   }
 
   return (
-    <motion.aside
-      initial={{ x: -260 }} animate={{ x: 0 }} exit={{ x: -260 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-      className="w-[260px] flex-shrink-0 h-screen flex flex-col overflow-y-auto overflow-x-hidden glass-sidebar"
+    <aside
+      className="w-full md:w-[260px] flex-shrink-0 h-screen flex flex-col overflow-y-auto overflow-x-hidden glass-sidebar"
     >
       {/* Header */}
       <div className="flex items-center justify-between px-3.5 py-3.5 border-b border-black/[0.05] dark:border-white/[0.05]">
