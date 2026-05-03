@@ -22,12 +22,7 @@ export default function App() {
     }
   }, [theme]);
 
-  // Handle initial sidebar state on mobile
-  useEffect(() => {
-    if (window.innerWidth < 768) {
-      useChatStore.getState().setSidebarOpen(false);
-    }
-  }, []);
+
 
   const handleSend = (text) => {
     if (window.__portfolioSend) {
@@ -43,7 +38,7 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <div className={`flex h-screen overflow-hidden bg-base text-primary relative ${theme === 'dark' ? 'dark' : ''}`}>
+      <div className={`flex h-screen overflow-hidden bg-base text-ink relative ${theme === 'dark' ? 'dark' : ''}`}>
         {/* 3D Background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <ThreeScene />

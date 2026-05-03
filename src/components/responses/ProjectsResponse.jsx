@@ -42,7 +42,7 @@ export default function ProjectsResponse({ data, onOpenModal }) {
             <motion.div
               key={p.id}
               className="relative rounded-2xl border overflow-hidden transition-all card-hover"
-              style={{ borderColor: color + '33', background: 'var(--glow-color)' }}
+              style={{ borderColor: 'var(--border)', background: 'var(--bg-panel)' }}
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.12, type: 'spring', stiffness: 120 }}

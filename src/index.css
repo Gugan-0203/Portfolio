@@ -8,46 +8,52 @@
    CSS CUSTOM PROPERTIES — THEME TOKENS
    ════════════════════════════════════════════════════════════════ */
 :root {
-  /* --- LIGHT THEME (DEFAULT) --- */
+  /* --- LIGHT THEME (REFYINED) --- */
   --bg-base:        #f8fafc;
   --bg-panel:       #ffffff;
   --bg-surface:     #f1f5f9;
   --bg-card:        #ffffff;
-  --bg-hover:       #f1f5f9;
+  --bg-hover:       #e2e8f0;
   --border:         rgba(0, 0, 0, 0.08);
-  --text-primary:   #0f172a; /* BLACK/DARK text */
+  --border-light:   rgba(0, 0, 0, 0.04);
+  --text-primary:   #0f172a;
   --text-secondary: #475569;
   --text-muted:     #94a3b8;
   --accent:         #3b82f6;
+  --accent-hover:   #2563eb;
+  --accent-soft:    rgba(59, 130, 246, 0.1);
   --accent-orange:  #e87c4e;
-  --glow-color:     rgba(59, 130, 246, 0.1);
+  --glow-color:     rgba(59, 130, 246, 0.06);
   --scene-bg:       #f8fafc;
-  --glass-bg:       rgba(255, 255, 255, 0.72);
-  --glass-border:   rgba(0, 0, 0, 0.07);
+  --glass-bg:       rgba(255, 255, 255, 0.75);
+  --glass-border:   rgba(0, 0, 0, 0.08);
 
-  /* Starfield Variables */
+  /* Starfield Variables (hidden in light mode) */
   --shadows-small: transparent;
   --shadows-medium: transparent;
   --shadows-large: transparent;
 }
 
 .dark {
-  /* --- DARK THEME --- */
+  /* --- DARK THEME (REFYINED) --- */
   --bg-base:        #0f1117;
   --bg-panel:       #161b27;
   --bg-surface:     #1e2436;
   --bg-card:        #252d42;
   --bg-hover:       #2e3650;
-  --border:         rgba(255, 255, 255, 0.07);
+  --border:         rgba(255, 255, 255, 0.08);
+  --border-light:   rgba(255, 255, 255, 0.04);
   --text-primary:   #e8eaf0;
   --text-secondary: #8b92a9;
   --text-muted:     #5c6380;
   --accent:         #6c8ef5;
+  --accent-hover:   #839cf7;
+  --accent-soft:    rgba(108, 142, 245, 0.12);
   --accent-orange:  #e87c4e;
-  --glow-color:     rgba(108, 142, 245, 0.2);
+  --glow-color:     rgba(108, 142, 245, 0.15);
   --scene-bg:       #0f1117;
-  --glass-bg:       rgba(22, 27, 39, 0.82);
-  --glass-border:   rgba(255, 255, 255, 0.06);
+  --glass-bg:       rgba(22, 27, 39, 0.85);
+  --glass-border:   rgba(255, 255, 255, 0.08);
 }
 
 /* ════════════════════════════════════════════════════════════════

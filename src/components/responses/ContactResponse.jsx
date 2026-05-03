@@ -26,7 +26,7 @@ function ContactItem({ icon, label, value, href, copyValue, color }) {
   return (
     <motion.div
       className="flex items-center gap-3 rounded-xl p-3.5 border transition-all cursor-pointer group"
-      style={{ borderColor: color + '33', background: `linear-gradient(135deg, ${color}0d, ${color}05)` }}
+      style={{ borderColor: 'var(--border)', background: `linear-gradient(135deg, ${color}0d, ${color}05)` }}
       whileHover={{ x: 6, borderColor: color + '77' }}
       transition={{ duration: 0.15 }}
     >
@@ -41,8 +41,8 @@ function ContactItem({ icon, label, value, href, copyValue, color }) {
         </div>
       </div>
       <button onClick={handleCopy}
-        className="p-2 rounded-lg border border-white/[0.06] text-ink-l-dim dark:text-ink-dim hover:text-white transition-all opacity-0 group-hover:opacity-100"
-        style={{ background: color + '22' }}
+        className="p-2 rounded-lg border border-border text-ink-l-dim dark:text-ink-dim hover:text-accent transition-all opacity-0 group-hover:opacity-100"
+        style={{ background: 'var(--bg-surface)' }}
         title="Copy">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
           <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" strokeWidth="2"/>
@@ -97,7 +97,7 @@ export default function ContactResponse({ data }) {
 
       {/* Contact Form */}
       <motion.div 
-        className="mt-4 p-5 rounded-2xl border border-white/[0.08] bg-surface-light/50 dark:bg-surface/50 backdrop-blur-sm relative overflow-hidden"
+        className="mt-4 p-5 rounded-2xl border border-border bg-surface dark:bg-surface/50 backdrop-blur-sm relative overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}

@@ -56,7 +56,7 @@ export default function ExperienceResponse({ data }) {
               className="flex-1 rounded-2xl p-4 cursor-pointer transition-all border"
               style={{
                 background: `linear-gradient(135deg, ${exp.color}12, ${exp.color}05)`,
-                borderColor: expanded === exp.id ? exp.color + '66' : 'rgba(255,255,255,0.07)',
+                borderColor: expanded === exp.id ? exp.color + '66' : 'var(--border)',
                 borderLeftWidth: exp.current ? 3 : 1,
                 borderLeftColor: exp.current ? exp.color : undefined,
               }}

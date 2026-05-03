@@ -5,20 +5,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Dark theme surfaces
-        canvas:  { DEFAULT: '#0f1117', light: '#f8f9fc' },
-        panel:   { DEFAULT: '#161b27', light: '#ffffff' },
-        surface: { DEFAULT: '#1e2436', light: '#f0f2f8' },
-        card:    { DEFAULT: '#252d42', light: '#e8ebf5' },
-        hover:   { DEFAULT: '#2e3650', light: '#dde1ee' },
+        // Theme-aware colors using CSS variables
+        base:    'var(--bg-base)',
+        panel:   'var(--bg-panel)',
+        surface: 'var(--bg-surface)',
+        card:    'var(--bg-card)',
+        hover:   'var(--bg-hover)',
+        border:  'var(--border)',
 
-        // Brand accent — professional indigo-orange
-        accent:  {
-          DEFAULT: '#6c8ef5',
-          h:       '#839cf7',
+        // Brand accent
+        accent: {
+          DEFAULT: 'var(--accent)',
+          h:       'var(--accent-hover)',
           '2':     '#4f6de0',
-          orange:  '#e87c4e',
-          soft:    'rgba(108,142,245,0.12)',
+          orange:  'var(--accent-orange)',
+          soft:    'var(--accent-soft)',
         },
 
         // Semantics
@@ -27,10 +28,18 @@ export default {
         violet:  '#a78bfa',
         warning: '#fbbf24',
 
-        // Dark text
-        ink:     { DEFAULT: '#e8eaf0', muted: '#8b92a9', dim: '#5c6380' },
-        // Light text
-        'ink-l': { DEFAULT: '#111827', muted: '#374151', dim: '#6b7280' },
+        // Typography
+        ink: {
+          DEFAULT: 'var(--text-primary)',
+          muted:   'var(--text-secondary)',
+          dim:     'var(--text-muted)',
+        },
+        // Legacy support (to be phased out or mapped)
+        'ink-l': {
+          DEFAULT: 'var(--text-primary)',
+          muted:   'var(--text-secondary)',
+          dim:     'var(--text-muted)',
+        },
       },
       fontFamily: {
         sans:    ['Montserrat', 'system-ui', '-apple-system', 'sans-serif'],

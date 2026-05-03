@@ -93,7 +93,10 @@ export default function Sidebar({ onSend }) {
         <p className="text-[10px] font-bold tracking-widest uppercase text-ink-l-dim dark:text-ink-dim px-1.5 mb-1.5">Quick Questions</p>
         <div className="flex flex-col gap-1">
           {QUICK_PROMPTS.map((p, i) => (
-            <button key={i} onClick={() => onSend(p.query)}
+            <button key={i} onClick={() => { 
+              onSend(p.query); 
+              if (window.innerWidth < 768) toggleSidebar();
+            }}
               className="text-left px-2.5 py-1.5 rounded-md text-xs text-ink-l-dim dark:text-ink-dim
                 border border-black/[0.05] dark:border-white/[0.05] hover:bg-hover-light dark:hover:bg-hover
                 hover:text-ink-l-muted dark:hover:text-ink-muted transition-colors truncate">

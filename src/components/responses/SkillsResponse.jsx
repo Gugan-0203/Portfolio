@@ -122,8 +122,8 @@ export default function SkillsResponse({ data, radar }) {
               <div className="flex flex-wrap gap-1.5">
                 {data[cat.key]?.map(sk => (
                   <motion.span key={sk} whileHover={{ scale: 1.1, y: -1 }}
-                    className="text-[11px] px-2 py-1 rounded-full border text-ink-l-muted dark:text-ink-muted cursor-default transition-colors hover:text-white"
-                    style={{ borderColor: cat.color + '44', background: cat.color + '14' }}>
+                    className="text-[11px] px-2 py-1 rounded-full border text-ink-l-muted dark:text-ink-muted cursor-default transition-colors hover:text-accent"
+                    style={{ borderColor: 'var(--border)', background: 'var(--bg-surface)' }}>
                     {sk}
                   </motion.span>
                 ))}
