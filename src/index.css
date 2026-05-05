@@ -63,6 +63,9 @@
 
 html, body {
   margin: 0; padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
   background: var(--bg-base);
   color: var(--text-primary);
   font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -73,16 +76,28 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'cv11', 'ss01';
   transition: background-color 0.4s ease, color 0.4s ease;
+  /* Fix for mobile Safari height */
+  height: -webkit-fill-available;
 }
 
 /* ════════════════════════════════════════════════════════════════
    SCROLLBAR
    ════════════════════════════════════════════════════════════════ */
-* { scrollbar-width: thin; scrollbar-color: var(--accent) transparent; }
+* { 
+  scrollbar-width: thin; 
+  scrollbar-color: var(--accent) transparent; 
+  -webkit-overflow-scrolling: touch;
+}
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--accent); opacity: 0.4; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { opacity: 0.8; }
+
+/* Mobile Scrolling Enhancements */
+.overflow-y-auto {
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
 
 /* ════════════════════════════════════════════════════════════════
    TYPOGRAPHY

@@ -24,7 +24,7 @@ export default function Topbar() {
         {!sidebarOpen && (
           <div className="hidden md:flex items-center gap-2">
             <img src="/avatar.png" alt="Logo" className="w-6 h-6 rounded-full object-cover border border-white/10" />
-            <span className="text-sm font-bold text-ink-l dark:text-ink">⚡ Portfolio</span>
+            <span className="text-sm font-bold text-ink-l dark:text-ink">PORTFOLIO</span>
           </div>
         )}
       </div>
@@ -35,7 +35,7 @@ export default function Topbar() {
         {!sidebarOpen && (
           <div className="flex items-center gap-2 md:hidden pointer-events-auto">
             <img src="/avatar.png" alt="Logo" className="w-6 h-6 rounded-full object-cover border border-white/10" />
-            <span className="text-sm font-bold text-ink-l dark:text-ink">⚡ Portfolio</span>
+            <span className="text-sm font-bold text-ink-l dark:text-ink">PORTFOLIO</span>
           </div>
         )}
         
@@ -54,7 +54,7 @@ export default function Topbar() {
               <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z" stroke="currentColor" strokeWidth="2"/>
               <path d="M9 21V12h6v9" stroke="currentColor" strokeWidth="2"/>
             </svg>
-            <span>Home</span>
+        
           </button>
         </nav>
       </div>

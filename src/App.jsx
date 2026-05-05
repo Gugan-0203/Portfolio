@@ -38,7 +38,7 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <div className={`flex h-screen overflow-hidden bg-base text-ink relative ${theme === 'dark' ? 'dark' : ''}`}>
+      <div className={`flex h-screen h-[100dvh] overflow-hidden bg-base text-ink relative ${theme === 'dark' ? 'dark' : ''}`}>
         {/* 3D Background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <ThreeScene />

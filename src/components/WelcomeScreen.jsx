@@ -15,7 +15,7 @@ const CARDS = [
 export default function WelcomeScreen({ onSend }) {
   return (
     <motion.div
-      className="flex flex-col items-center justify-start min-h-full px-5 pt-16 pb-12 text-center overflow-y-auto"
+      className="flex flex-col items-center justify-start min-h-full px-5 pt-16 pb-12 text-center"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}

@@ -22,7 +22,7 @@ export default function Sidebar({ onSend }) {
 
   return (
     <aside
-      className="w-full md:w-[260px] flex-shrink-0 h-screen flex flex-col overflow-y-auto overflow-x-hidden glass-sidebar"
+      className="w-full md:w-[260px] flex-shrink-0 h-screen h-[100dvh] flex flex-col overflow-y-auto overflow-x-hidden glass-sidebar"
     >
       {/* Header */}
       <div className="flex items-center justify-between px-3.5 py-3.5 border-b border-black/[0.05] dark:border-white/[0.05]">
@@ -108,7 +108,7 @@ export default function Sidebar({ onSend }) {
 
       {/* History */}
       {sessions.length > 0 && (
-        <div className="px-2.5 pt-3 flex-1 overflow-y-auto">
+        <div className="px-2.5 pt-3 flex-1">
           <p className="text-[10px] font-bold tracking-widest uppercase text-ink-l-dim dark:text-ink-dim px-1.5 mb-1.5">History</p>
           <div className="flex flex-col gap-0.5">
             <AnimatePresence>
