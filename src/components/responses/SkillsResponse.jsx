@@ -80,7 +80,7 @@ export default function SkillsResponse({ data, radar }) {
       {tab === 'radar' && (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <div className="relative rounded-2xl border border-accent/20 overflow-hidden card-hover"
-            style={{ background: 'var(--glow-color)' }}>
+            style={{ background: 'var(--glow-color)', pointerEvents: 'none', touchAction: 'auto' }}>
             <ResponsiveContainer width="100%" height={280}>
               <RadarChart data={radarData} margin={{ top: 15, right: 40, bottom: 15, left: 40 }}>
                 <PolarGrid stroke="rgba(108,142,245,0.15)" />

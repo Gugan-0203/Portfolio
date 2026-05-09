@@ -40,7 +40,7 @@ function ContactItem({ icon, label, value, href, copyValue, color }) {
           }
         </div>
       </div>
-      <button onClick={handleCopy}
+      <button type="button" onClick={(e) => { e.stopPropagation(); handleCopy(e) }}
         className="p-2 rounded-lg border border-border text-ink-l-dim dark:text-ink-dim hover:text-accent transition-all opacity-0 group-hover:opacity-100"
         style={{ background: 'var(--bg-surface)' }}
         title="Copy">
@@ -70,8 +70,8 @@ export default function ContactResponse({ data }) {
       <div className="relative rounded-2xl border border-accent/20 overflow-hidden card-hover"
         style={{ background: 'var(--glow-color)' }}>
         <div className="flex items-center gap-4 px-4 py-3">
-          <div style={{ width: 70, height: 70, flexShrink: 0 }}>
-            <Canvas>
+          <div style={{ width: 70, height: 70, flexShrink: 0, pointerEvents: 'none', touchAction: 'auto' }}>
+            <Canvas style={{ pointerEvents: 'none' }}>
               <PerspectiveCamera makeDefault position={[0, 0, 3.5]} fov={55} />
               <ambientLight intensity={0.5} />
               <pointLight position={[3, 3, 3]} intensity={2} color="#6c8ef5" />

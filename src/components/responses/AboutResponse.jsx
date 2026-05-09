@@ -28,8 +28,8 @@ export default function AboutResponse({ data }) {
       <div className="relative rounded-2xl overflow-hidden mb-4 border border-accent/20"
         style={{ background: isDark ? 'linear-gradient(135deg,rgba(108,142,245,0.12),rgba(167,139,250,0.06))' : 'linear-gradient(135deg,rgba(79,109,224,0.1),rgba(124,92,224,0.05))' }}>
         <div className="flex items-center gap-4 p-4">
-          <div style={{ width: 80, height: 80, flexShrink: 0 }}>
-            <Canvas>
+          <div style={{ width: 80, height: 80, flexShrink: 0, pointerEvents: 'none', touchAction: 'auto' }}>
+            <Canvas style={{ pointerEvents: 'none' }}>
               <PerspectiveCamera makeDefault position={[0, 0, 4]} fov={50} />
               <ambientLight intensity={isDark ? 0.5 : 0.7} />
               <pointLight position={[5, 5, 5]} intensity={2} color={isDark ? '#6c8ef5' : '#4f6de0'} />

@@ -118,6 +118,14 @@ html, body {
   }
 }
 
+/* ── Prevent decorative Three.js Canvas from stealing touch/scroll events ── */
+/* Any canvas inside a pointer-events:none wrapper must not block touch */
+canvas[style*="pointer-events: none"],
+canvas[style*="pointer-events:none"] {
+  touch-action: auto !important;
+  pointer-events: none !important;
+}
+
 /* ════════════════════════════════════════════════════════════════
    TYPOGRAPHY
    ════════════════════════════════════════════════════════════════ */

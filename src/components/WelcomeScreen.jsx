@@ -102,8 +102,9 @@ export default function WelcomeScreen({ onSend }) {
       <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 w-full max-w-[560px]">
         {CARDS.map((card, i) => (
           <motion.button
+            type="button"
             key={card.id}
-            onClick={() => onSend(card.id)}
+            onClick={(e) => { e.stopPropagation(); onSend(card.id) }}
             className={`relative flex flex-col items-start gap-1.5 px-4 py-3.5 bg-gradient-to-br ${card.color} border border-white/[0.07] rounded-2xl text-left overflow-hidden transition-all duration-300 ${card.glow} hover:border-white/20 hover:-translate-y-1`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

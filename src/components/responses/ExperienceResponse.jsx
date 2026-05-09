@@ -42,8 +42,8 @@ export default function ExperienceResponse({ data }) {
             transition={{ delay: i * 0.14, type: 'spring', stiffness: 120 }}
           >
             {/* 3D Orb */}
-            <div style={{ width: 38, height: 38, flexShrink: 0, marginTop: 8 }}>
-              <Canvas>
+            <div style={{ width: 38, height: 38, flexShrink: 0, marginTop: 8, pointerEvents: 'none', touchAction: 'auto' }}>
+              <Canvas style={{ pointerEvents: 'none' }}>
                 <PerspectiveCamera makeDefault position={[0, 0, 3]} fov={60} />
                 <ambientLight intensity={0.5} />
                 <pointLight position={[2, 2, 2]} intensity={2} color={exp.color} />

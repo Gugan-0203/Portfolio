@@ -40,8 +40,8 @@ export default function EducationResponse({ data, languages }) {
             whileHover={{ x: 4 }}
           >
             {/* 3D orb */}
-            <div style={{ width: 64, height: 64, flexShrink: 0 }}>
-              <Canvas>
+            <div style={{ width: 64, height: 64, flexShrink: 0, pointerEvents: 'none', touchAction: 'auto' }}>
+              <Canvas style={{ pointerEvents: 'none' }}>
                 <PerspectiveCamera makeDefault position={[0, 0, 3]} fov={55} />
                 <ambientLight intensity={0.4} />
                 <pointLight position={[2, 2, 2]} intensity={2} color={color} />

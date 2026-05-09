@@ -50,8 +50,8 @@ export default function ProjectsResponse({ data, onOpenModal }) {
             >
               {/* 3D header */}
               <div className="flex items-center gap-0 relative">
-                <div style={{ width: 90, height: 90, flexShrink: 0 }}>
-                  <Canvas>
+                <div style={{ width: 90, height: 90, flexShrink: 0, pointerEvents: 'none', touchAction: 'auto' }}>
+                  <Canvas style={{ pointerEvents: 'none' }}>
                     <PerspectiveCamera makeDefault position={[0, 0, 4]} fov={55} />
                     <ambientLight intensity={0.4} />
                     <pointLight position={[3, 3, 3]} intensity={2} color={color} />
@@ -83,7 +83,8 @@ export default function ProjectsResponse({ data, onOpenModal }) {
                 </div>
 
                 <button
-                  onClick={() => onOpenModal({ ...p, color })}
+                  type="button"
+                  onClick={(e) => { e.stopPropagation(); onOpenModal({ ...p, color }) }}
                   className="inline-flex items-center gap-1.5 text-[12px] font-semibold px-3.5 py-1.5 rounded-lg border transition-all hover:text-white hover:bg-opacity-100"
                   style={{ color, borderColor: color + '55', background: color + '15' }}
                   onMouseEnter={e => { e.currentTarget.style.background = color + '44' }}
