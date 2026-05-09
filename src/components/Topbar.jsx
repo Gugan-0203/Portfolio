@@ -8,7 +8,7 @@ export default function Topbar() {
     navigator.clipboard.writeText(window.location.href).then(() => addToast('🔗 Link copied!'))
 
   return (
-    <div className="flex items-center justify-between px-4 py-2.5 flex-shrink-0 glass-topbar gap-3 relative">
+    <div className="flex items-center justify-between px-4 py-2 md:py-2.5 flex-shrink-0 glass-topbar gap-3 relative">
       {/* LEFT — hamburger + Brand (desktop) */}
       <div className="flex items-center gap-2 z-10">
         <button

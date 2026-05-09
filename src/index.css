@@ -111,10 +111,23 @@ html, body {
 
 /* Touch device scrolling fix */
 @media (pointer: coarse) {
+  html, body {
+    height: 100%;
+    height: -webkit-fill-available;
+    overflow: hidden;
+    position: fixed; /* Prevent body scroll entirely on iOS */
+    width: 100%;
+  }
+  
+  #root {
+    height: 100%;
+    height: -webkit-fill-available;
+  }
+
   .mobile-scroll {
-    overflow-y: scroll !important;
+    overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
-    touch-action: pan-y pinch-zoom !important;
+    touch-action: pan-y !important;
   }
 }
 

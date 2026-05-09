@@ -44,7 +44,7 @@ export default function ProjectModal() {
             </div>
 
             {/* Content */}
-            <div className="px-5 pb-6 overflow-y-auto flex-1 min-h-0">
+            <div className="px-5 pb-10 overflow-y-auto flex-1 min-h-0">
               {/* Header */}
               <div className="flex items-start gap-3 mb-4">
                 <span className="text-[36px]">{p.emoji}</span>

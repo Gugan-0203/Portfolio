@@ -22,7 +22,7 @@ export default function ChatWindow({ onOpenModal }) {
 
   const scrollToLatest = () => {
     if (lastMessageRef.current) {
-      lastMessageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      lastMessageRef.current.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
     } else {
       bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
     }
@@ -92,7 +92,7 @@ export default function ChatWindow({ onOpenModal }) {
         {displayHome ? (
           <WelcomeScreen key="welcome" onSend={sendMessage} />
         ) : (
-          <div key="messages" className="py-4 pb-6">
+          <div key="messages" className="py-4 pb-24">
             {messages.map((msg, index) => (
               <div 
                 key={msg.id} 
@@ -106,7 +106,7 @@ export default function ChatWindow({ onOpenModal }) {
               </div>
             ))}
             {isTyping && <TypingIndicator />}
-            <div ref={bottomRef} />
+            <div ref={bottomRef} className="h-4" />
           </div>
         )}
       </AnimatePresence>
