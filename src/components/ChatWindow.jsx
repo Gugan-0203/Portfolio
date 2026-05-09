@@ -74,9 +74,16 @@ export default function ChatWindow({ onOpenModal }) {
   // Show welcome/home whenever showHome is true OR messages are empty
   const displayHome = showHome || messages.length === 0
 
+  // Reset scroll when going from home to chat
+  useEffect(() => {
+    if (!displayHome && winRef.current) {
+      winRef.current.scrollTop = 0
+    }
+  }, [displayHome])
+
   return (
     <div
-      className="flex-1 min-h-0 overflow-y-auto mobile-scroll relative scroll-smooth glass-chat"
+      className="absolute inset-0 overflow-y-auto mobile-scroll scroll-smooth glass-chat"
       ref={winRef}
       onScroll={handleScroll}
       style={{ WebkitOverflowScrolling: 'touch', touchAction: 'pan-y' }}
