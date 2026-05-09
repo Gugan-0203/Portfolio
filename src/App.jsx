@@ -38,7 +38,7 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <div className={`flex h-screen h-[100dvh] overflow-hidden bg-base text-ink relative ${theme === 'dark' ? 'dark' : ''}`}>
+      <div className={`flex h-[100dvh] min-h-0 overflow-hidden bg-base text-ink relative ${theme === 'dark' ? 'dark' : ''}`}>
         {/* 3D Background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <ThreeScene />
@@ -79,7 +79,7 @@ export default function App() {
         </AnimatePresence>
 
         {/* Main Chat Area */}
-        <div className="flex-1 flex flex-col z-10 relative h-full max-w-full overflow-x-hidden overflow-y-hidden">
+        <div className="flex-1 flex flex-col z-10 relative h-full min-h-0 max-w-full overflow-x-hidden overflow-y-hidden">
           {/* Mobile/Top Navbar */}
           <Topbar onSend={handleSend} />
 

@@ -66,7 +66,8 @@ export default function SkillsResponse({ data, radar }) {
       {/* Tab switcher */}
       <div className="flex gap-1 bg-surface-light dark:bg-surface border border-black/[0.09] dark:border-white/[0.08] rounded-xl p-1 mb-5">
         {tabs.map(([id, label]) => (
-          <button key={id} onClick={() => setTab(id)}
+          <button type="button" key={id}
+            onClick={(e) => { e.stopPropagation(); setTab(id) }}
             className={`flex-1 py-1.5 rounded-lg text-[11px] font-semibold transition-all ${tab === id
               ? 'bg-accent text-white shadow-sm'
               : 'text-ink-l-dim dark:text-ink-dim hover:text-ink-l dark:hover:text-ink'}`}>
