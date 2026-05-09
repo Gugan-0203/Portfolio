@@ -115,13 +115,12 @@ html, body {
     height: 100%;
     height: -webkit-fill-available;
     overflow: hidden;
-    position: fixed; /* Prevent body scroll entirely on iOS */
     width: 100%;
   }
   
   #root {
-    height: 100%;
-    height: -webkit-fill-available;
+    height: 100dvh;
+    width: 100%;
   }
 
   .mobile-scroll {

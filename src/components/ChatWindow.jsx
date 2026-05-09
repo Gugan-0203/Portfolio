@@ -83,7 +83,7 @@ export default function ChatWindow({ onOpenModal }) {
 
   return (
     <div
-      className="absolute inset-0 overflow-y-auto mobile-scroll scroll-smooth glass-chat"
+      className="flex-1 min-h-0 overflow-y-auto mobile-scroll relative scroll-smooth glass-chat"
       ref={winRef}
       onScroll={handleScroll}
       style={{ WebkitOverflowScrolling: 'touch', touchAction: 'pan-y' }}
