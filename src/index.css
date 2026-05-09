@@ -80,6 +80,15 @@ html, body {
   height: -webkit-fill-available;
 }
 
+#root {
+  height: 100%;
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
 /* ════════════════════════════════════════════════════════════════
    SCROLLBAR
    ════════════════════════════════════════════════════════════════ */
@@ -94,9 +103,20 @@ html, body {
 ::-webkit-scrollbar-thumb:hover { opacity: 0.8; }
 
 /* Mobile Scrolling Enhancements */
-.overflow-y-auto {
-  touch-action: pan-y;
-  -webkit-overflow-scrolling: touch;
+.overflow-y-auto,
+.mobile-scroll {
+  touch-action: pan-y !important;
+  -webkit-overflow-scrolling: touch !important;
+  overscroll-behavior-y: contain;
+}
+
+/* Touch device scrolling fix */
+@media (pointer: coarse) {
+  .mobile-scroll {
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y pinch-zoom !important;
+  }
 }
 
 /* ════════════════════════════════════════════════════════════════

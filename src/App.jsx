@@ -79,7 +79,7 @@ export default function App() {
         </AnimatePresence>
 
         {/* Main Chat Area */}
-        <div className="flex-1 flex flex-col z-10 relative h-full max-w-full overflow-hidden">
+        <div className="flex-1 flex flex-col z-10 relative h-full max-w-full overflow-x-hidden overflow-y-hidden">
           {/* Mobile/Top Navbar */}
           <Topbar onSend={handleSend} />
 
