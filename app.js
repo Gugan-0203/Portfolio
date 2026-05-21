@@ -46,7 +46,7 @@ const portfolioData = {
       company: "Gravitus IT Services Pvt. Ltd.",
       type: "Full Time – Hybrid",
       location: "Salem, Tamil Nadu",
-      period: "Aug 2022 – Dec 2024",
+      period: "June 2022 – Dec 2024",
       project: "Gravitus Crypto Exchange (Spot & P2P)",
       tech: ["React.js", "JavaScript ES6+", "WebSockets", "Material UI", "REST APIs", "Git", "HTML5", "CSS3"],
       bullets: [
@@ -102,7 +102,7 @@ const portfolioData = {
     {
       emoji: "₿",
       title: "Gravitus Crypto Exchange",
-      year: "Aug 2022 – Dec 2024",
+      year: "June 2022 – Dec 2024",
       company: "Gravitus IT Services",
       tech: ["React.js", "WebSockets", "Material UI", "JavaScript ES6+"],
       description: "Spot & P2P cryptocurrency exchange UI from scratch with real-time order books, live candlestick charts, price tickers, and transaction history serving thousands of concurrent traders.",
