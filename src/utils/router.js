@@ -55,7 +55,7 @@ export const getFallbackContent = () => ({
 export const getScrumContent = () => ({
   type: 'scrum',
   title: 'Scrum Master',
-  data: portfolio.experiences[1],
+  data: portfolio.experiences.find(exp => exp.company.includes('IAT')) || portfolio.experiences[1],
 })
 
 // ── Availability ──────────────────────────────────────────────────────

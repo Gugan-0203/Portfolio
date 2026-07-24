@@ -13,12 +13,30 @@ export const portfolio = {
 
   stats: [
     { value: '4+', label: 'Years Exp.' },
-    { value: '3', label: 'Companies' },
-    { value: '5', label: 'Projects' },
+    { value: '4', label: 'Companies' },
+    { value: '6', label: 'Projects' },
     { value: '30%', label: 'Sprint ↑' },
   ],
 
   experiences: [
+    {
+      id: 4,
+      role: 'Senior Software Engineer',
+      company: 'Digit7 private limited',
+      type: 'Full Time – On-Site',
+      location: 'Coimbatore, Tamil Nadu',
+      period: 'Jan 2026 – Present',
+      current: true,
+      project: 'Enterprise Mobile Application',
+      tech: ['React.js', 'React Native', 'Native Tools', 'Material UI', 'JavaScript ES6+', 'Xcode', 'Android Studio'],
+      color: '#e87c4e',
+      bullets: [
+        'Architected and co-developed high-performance React Native mobile applications, leveraging native bridges and custom native tools for seamless iOS and Android deployments.',
+        'Designed responsive, interactive user interfaces utilizing Material UI for web administration dashboards, ensuring cross-platform styling parity.',
+        'Optimized application performance by profiling native threads and memory usage, achieving a significant reduction in startup latency.',
+        'Collaborated closely with cross-functional teams to integrate REST APIs, offline data sync mechanisms, and push notification services.'
+      ],
+    },
     {
       id: 1,
       role: 'Front-End Developer',
@@ -76,10 +94,10 @@ export const portfolio = {
   ],
 
   skills: {
-    frontend: ['React.js', 'Next.js', 'TypeScript', 'Vue.js', 'Svelte', 'JavaScript ES6+', 'HTML5', 'CSS3 / SASS'],
+    frontend: ['React.js', 'React Native', 'Next.js', 'TypeScript', 'Vue.js', 'Svelte', 'JavaScript ES6+', 'HTML5', 'CSS3 / SASS'],
     ui: ['Material UI', 'Tailwind CSS', 'Bootstrap', 'Styled Components', 'Redux', 'Context API'],
     api: ['REST APIs', 'Axios', 'WebSockets', 'Socket.IO', 'Postman', 'JSON', 'FastAPI'],
-    build: ['Vite', 'Webpack', 'Babel', 'NPM', 'Yarn'],
+    build: ['Vite', 'Webpack', 'Xcode', 'Android Studio', 'Babel', 'NPM', 'Yarn'],
     testing: ['Jest', 'Cypress', 'React Testing Library'],
     devops: ['Git / GitHub', 'CI/CD', 'Vercel', 'Firebase', 'Jira'],
     soft: ['Agile / Scrum', 'Problem Solving', 'Clean Code', 'Time Management', 'Communication'],
@@ -87,6 +105,7 @@ export const portfolio = {
 
   coreSkills: [
     { name: 'React.js / Next.js', level: 95, subject: 'React' },
+    { name: 'React Native', level: 90, subject: 'Native' },
     { name: 'TypeScript', level: 90, subject: 'TS' },
     { name: 'Vue.js / Svelte', level: 80, subject: 'Vue' },
     { name: 'Material UI', level: 88, subject: 'MUI' },

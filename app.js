@@ -11,6 +11,21 @@ const portfolioData = {
 
   experiences: [
     {
+      role: "Senior Software Engineer",
+      company: "Digit7 private limited",
+      type: "Full Time – On-Site",
+      location: "Coimbatore, Tamil Nadu",
+      period: "Jan 2026 – Present",
+      project: "Enterprise Mobile Application",
+      tech: ["React.js", "React Native", "Native Tools", "Material UI", "JavaScript ES6+", "Xcode", "Android Studio"],
+      bullets: [
+        "Architected and co-developed high-performance React Native mobile applications, leveraging native bridges and custom native tools for seamless iOS and Android deployments.",
+        "Designed responsive, interactive user interfaces utilizing Material UI for web administration dashboards, ensuring cross-platform styling parity.",
+        "Optimized application performance by profiling native threads and memory usage, achieving a significant reduction in startup latency.",
+        "Collaborated closely with cross-functional teams to integrate REST APIs, offline data sync mechanisms, and push notification services."
+      ]
+    },
+    {
       role: "Front-End Developer",
       company: "Cipherbizz (CipherTech Solution)",
       type: "Full Time – Remote",
@@ -59,10 +74,10 @@ const portfolioData = {
   ],
 
   skills: {
-    frontend: ["React.js / Next.js", "TypeScript", "Vue.js / Svelte", "JavaScript ES6+", "HTML5", "CSS3 / SASS"],
+    frontend: ["React.js / Next.js", "React Native", "TypeScript", "Vue.js / Svelte", "JavaScript ES6+", "HTML5", "CSS3 / SASS"],
     ui: ["Material UI", "Tailwind CSS", "Bootstrap", "Styled Components", "Redux / Context API"],
     api: ["REST APIs / Axios", "WebSockets", "Socket.IO", "Postman", "JSON / FastAPI"],
-    build: ["Vite", "Webpack", "Babel", "NPM / Yarn"],
+    build: ["Vite", "Webpack", "Xcode", "Android Studio", "Babel", "NPM / Yarn"],
     testing: ["Jest", "Cypress", "React Testing Library"],
     devops: ["Git / GitHub", "CI/CD", "Vercel", "Firebase", "Jira"],
     soft: ["Agile / Scrum", "Problem Solving", "Clean Code", "Time Management", "Communication"]
@@ -70,6 +85,7 @@ const portfolioData = {
 
   coreSkills: [
     { name: "React.js / Next.js", level: 95 },
+    { name: "React Native", level: 90 },
     { name: "TypeScript", level: 90 },
     { name: "Vue.js / Svelte", level: 80 },
     { name: "Material UI / Tailwind", level: 88 },
@@ -140,8 +156,8 @@ function buildAbout() {
     <p>${portfolioData.summary}</p>
     <div class="stats-row">
       <div class="stat-item"><div class="stat-value">4+</div><div class="stat-label">Years Experience</div></div>
-      <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Companies</div></div>
-      <div class="stat-item"><div class="stat-value">4</div><div class="stat-label">Major Projects</div></div>
+      <div class="stat-item"><div class="stat-value">4</div><div class="stat-label">Companies</div></div>
+      <div class="stat-item"><div class="stat-value">5</div><div class="stat-label">Major Projects</div></div>
       <div class="stat-item"><div class="stat-value">30%</div><div class="stat-label">Sprint Velocity ↑</div></div>
     </div>
     <p style="color:var(--text-secondary);font-size:13px;">💬 Feel free to ask me about my <strong style="color:var(--text-primary)">experience</strong>, <strong style="color:var(--text-primary)">skills</strong>, <strong style="color:var(--text-primary)">projects</strong>, or how to get in <strong style="color:var(--text-primary)">contact</strong>!</p>
