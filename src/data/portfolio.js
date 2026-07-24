@@ -25,7 +25,7 @@ export const portfolio = {
       company: 'Digit7 private limited',
       type: 'Full Time – On-Site',
       location: 'Coimbatore, Tamil Nadu',
-      period: 'Jan 2026 – Present',
+      period: 'June 2026 – Present',
       current: true,
       project: 'Enterprise Mobile Application',
       tech: ['React.js', 'React Native', 'Native Tools', 'Material UI', 'JavaScript ES6+', 'Xcode', 'Android Studio'],
